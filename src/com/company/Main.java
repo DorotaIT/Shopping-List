@@ -51,21 +51,20 @@ public class Main {
 
     public static void addProduct() {
         System.out.println("Podaj nazwę produktu, który chcesz dodać.");
-        //Scanner adInput = new Scanner(System.in);
         String productName = globalInput.next();
-
         shoppingList.add(productName);
+
         printProductList();
         printCommand();
     }
 
     public static void deleteProduct() {
         System.out.println('\n' + "Podaj numer produktu, który chcesz skasować.");
-        //Scanner deleteInput = new Scanner(System.in);
         int productName = globalInput.nextInt();
-       // deleteInput.nextInt();
         shoppingList.remove(productName - 1);
+
         System.out.println('\n' + "Zaktualizowana lista:");
+
         printProductList();
         printCommand();
     }
@@ -86,11 +85,9 @@ public class Main {
     //edit product list
     public static void editProduct() {
         System.out.println("Podaj numer produktu, który chcesz edytować.");
-        //Scanner getProductIndexScanner = new Scanner(System.in);
         int productIndex = globalInput.nextInt();
 
         System.out.println("Podaj nową nazwę produktu.");
-        //Scanner newEditInput = new Scanner(System.in);
         String newProductName = globalInput.next();
 
         shoppingList.set(productIndex - 1, newProductName);
